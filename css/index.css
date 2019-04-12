@@ -1,0 +1,33 @@
+header {
+    background-image: url("/img/header-background.jpg");
+    padding: 100px 0 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.first-section img {
+    width: 390px;
+    height: 310px;
+    border-radius: 8px;
+}
+
+.header-content {
+    padding: 400px 0;
+}
+
+.first-section img {
+    position: relative;
+    bottom: 40%;
+}
+
+.first-section .header-body {
+    padding-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .first-section img {
+        border-radius: 8px;
+        padding-top: 20px;
+        bottom: 0;
+    }
+}
