@@ -51,6 +51,16 @@ header {
     font-size: 4rem;
 }
 
+.fourth-section i {
+    font-size: 4rem;
+}
+
+hr {
+    border-width: 1px 1px 0;
+    border-style: solid;
+    border-color: e3e3e3; 
+    width: 30%;
+}
 
 
 /*  */
