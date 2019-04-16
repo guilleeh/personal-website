@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background-image: url("/img/header-background.jpg");
+    background-image: url("/img/header-background-min.jpg");
     padding: 100px 0 375px;
     background-size: cover;
     background-repeat: no-repeat;
