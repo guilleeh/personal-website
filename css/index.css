@@ -26,8 +26,8 @@ header {
 }
 
 .first-section img {
-    position: relative;
-    bottom: 40%;
+    margin-top: -90px;
+    margin-bottom: 90px;
 }
 
 .first-section .header-body {
@@ -63,10 +63,28 @@ hr {
 }
 
 
-/*  */
 @media (max-width: 900px) {
     .first-section img {
         border-radius: 8px;
         bottom: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-body {
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .first-section img {
+        margin-top: -57px;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 54px 0 178px;
     }
 }
