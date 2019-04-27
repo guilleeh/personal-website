@@ -22,3 +22,14 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   
 });
+
+//Flip order of second project
+var vusarProject = document.querySelector('.vusar-image')
+
+window.onresize = function() {
+    if (window.innerWidth <= 1000) {
+        vusarProject.classList.add("order-last");
+    } else {
+        vusarProject.classList.remove('order-last');
+    }
+}
