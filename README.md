@@ -9,7 +9,7 @@ This is the most up-to-date version of my personal website.
 
 ## Authors
 
-* **Guillermo Hernandez** - *Initial work* - [PurpleBooth](https://github.com/guilleeh)
+* **Guillermo Hernandez** - *Initial work* - [guilleeh](https://github.com/guilleeh)
 
 ## License
 
