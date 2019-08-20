@@ -4,7 +4,11 @@ const path = require('path');
 
 const app = express();
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) =>
+    res.json({ msg: 'Welcome to Guillermo Hernandez personal website!' })
+);
+
+app.use('/api/auth', require('./routes/auth'));
 
 const PORT = process.env.PORT || 5000;
 
