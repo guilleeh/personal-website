@@ -7,6 +7,8 @@ const app = express();
 //Connect DB
 connectDB();
 
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) =>
     res.json({ msg: 'Welcome to Guillermo Hernandez personal website!' })
 );
