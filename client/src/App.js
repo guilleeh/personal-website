@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
-function App() {
+const App = () => {
     return (
-        <div className='App'>
-            <h1 style={{ textAlign: 'center' }}>Welcome to React!</h1>
-        </div>
+        <Fragment>
+            <h1 style={{ textAlign: 'center' }}>Work in progress.</h1>
+        </Fragment>
     );
-}
+};
 
 export default App;
