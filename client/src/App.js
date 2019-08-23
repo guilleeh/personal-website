@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import Nav from './components/layout/Nav';
+
 const App = () => {
     return (
         <Fragment>
-            <h1 style={{ textAlign: 'center' }}>Work in progress.</h1>
+            <Nav />
         </Fragment>
     );
 };
