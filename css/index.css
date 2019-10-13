@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Open Sans', sans-serif, 'Times New Roman', Times, serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: #f6f6f8;
 }
 
@@ -52,7 +52,7 @@ header {
     font-size: 4rem;
 }
 
-.vusar-description i {
+.ocunited-description i {
     font-size: 4rem;
 }
 

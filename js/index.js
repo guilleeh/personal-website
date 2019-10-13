@@ -24,7 +24,7 @@ AOS.init({
 });
 
 //Flip order of second project
-var vusarProject = document.querySelector('.vusar-image')
+var vusarProject = document.querySelector('.ocunited-image')
 
 window.onresize = function() {
     if (window.innerWidth <= 1000) {
