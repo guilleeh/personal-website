@@ -1,20 +1,30 @@
 import React from 'react'
-import Particles from 'react-particles-js';
+
+import ParticlesBg from 'particles-bg'
 
 const Header = () => {
+    let config = {
+        position: {x:1,y:1,width:100,height:30}, // all or center or {x:1,y:1,width:100,height:100}
+    };
+
     return(
-        <section class="hero is-large">
-          <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-size-1">
-                Hi, I'm Guillermo Hernandez
-                </h1>
-                <h2 class="subtitle is-size-3">
-                Software Engineer.
-                </h2>
+        <React.Fragment>
+            <div>
+                <section className="hero is-large">
+                <div className="hero-body">
+                    <div class="container has-text-centered">
+                        <h1 className="title is-size-1">
+                        Hi, I'm Guillermo Hernandez
+                        </h1>
+                        <h2 className="subtitle is-size-3">
+                        Software Engineer.
+                        </h2>
+                    </div>
+                </div>
+                </section>
             </div>
-         </div>
-        </section>
+            <ParticlesBg config={config} color="#a8dadc" num={50} type="cobweb" bg={true} />
+        </React.Fragment>
     )
 }
 

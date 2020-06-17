@@ -5,6 +5,7 @@ import "../styles/styles.scss"
 import Navbar from '../components/navbar';
 import Header from '../components/header';
 import Body from '../components/body'
+import Projects from '../components/projects'
 
 
 const IndexPage = () => {
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Navbar></Navbar>
       <Header></Header>
       <Body></Body>
+      <Projects></Projects>
     </React.Fragment>
   )
 }
