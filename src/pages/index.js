@@ -14,6 +14,7 @@ const IndexPage = () => {
       <Navbar></Navbar>
       <Header></Header>
       <Body></Body>
+      <br/>
       <Projects></Projects>
     </React.Fragment>
   )

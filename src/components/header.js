@@ -1,6 +1,10 @@
 import React from 'react'
-
+import styled from "styled-components"
 import ParticlesBg from 'particles-bg'
+
+const H2 = styled.h1`
+    color: #457b9d;
+`
 
 const Header = () => {
     let config = {
@@ -14,16 +18,16 @@ const Header = () => {
                 <div className="hero-body">
                     <div class="container has-text-centered">
                         <h1 className="title is-size-1">
-                        Hi, I'm Guillermo Hernandez
+                            Hi, I'm Guillermo Hernandez
                         </h1>
-                        <h2 className="subtitle is-size-3">
+                        <H2 className="subtitle is-size-3">
                         Software Engineer.
-                        </h2>
+                        </H2>
                     </div>
                 </div>
                 </section>
             </div>
-            <ParticlesBg config={config} color="#a8dadc" num={50} type="cobweb" bg={true} />
+            <ParticlesBg config={config} color="#a8dadc" num={75} type="cobweb" bg={true} />
         </React.Fragment>
     )
 }

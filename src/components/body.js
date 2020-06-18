@@ -1,19 +1,29 @@
 import React from 'react';
 
+import styled from "styled-components"
 import headshot from '../../static/img/me.jpg'
+import '../styles/test.css'
+
+
+const Title = styled.h2`
+  color: #a8dadc;
+`
 
 const Body = () => {
     return(
-        <div class="container">
+        <div className="container">
+            <br/><br/><br/>
+            <Title className="title is-2 has-text-centered">About Me</Title>
+            <br/>
             <div>
-                <div class="columns">
-                    <div class="column is-two-fifths">
-                        <figure class="image is-3by2">
+                <div className="columns">
+                    <div className="column is-two-fifths">
+                        <figure className="image is-3by2">
                             <img src={headshot}></img>
                         </figure>
                     </div>
-                    <div class="column is-three-fifths">
-                        <div class="content is-medium">
+                    <div className="column is-three-fifths">
+                        <div className="content is-medium">
                             <h1>Hello World</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
                             <h2>Second level</h2>
