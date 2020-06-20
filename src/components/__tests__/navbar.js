@@ -1,11 +1,11 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import Header from "../header"
+import Navbar from "../navbar"
 
-describe("Header", () => {
+describe("Navbar", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Header siteTitle="Site header" />)
+      .create(<Navbar siteTitle="Site navbar" />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })

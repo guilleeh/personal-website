@@ -1,26 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-<section
-  class="hero is-large"
->
-  <div
-    class="hero-body"
-  >
-    <div
-      class="container has-text-centered"
+Array [
+  <div>
+    <section
+      className="hero is-large"
     >
-      <h1
-        class="title is-size-1"
+      <div
+        className="hero-body"
       >
-        Hi, I'm Guillermo Hernandez
-      </h1>
-      <h2
-        class="subtitle is-size-3"
-      >
-        Software Engineer.
-      </h2>
-    </div>
-  </div>
-</section>
+        <div
+          class="container has-text-centered"
+        >
+          <h1
+            className="title is-size-1"
+          >
+            Hi, I'm Guillermo Hernandez
+          </h1>
+          <h1
+            className="sc-AxjAm XBEoP subtitle is-size-3"
+          >
+            Software Engineer.
+          </h1>
+        </div>
+      </div>
+    </section>
+  </div>,
+  <canvas
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+        "zIndex": -1,
+      }
+    }
+  />,
+]
 `;

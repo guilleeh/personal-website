@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar"
+  role="navigation"
+  style={
+    Object {
+      "backgroundColor": "#FCFEFB",
+    }
+  }
+>
+  <div
+    className="navbar-brand"
+  >
+    <a
+      className="navbar-item"
+      href="#"
+    >
+      <img
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      aria-expanded="false"
+      aria-label="menu"
+      className="navbar-burger burger"
+      data-target="navbarBasicExample"
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+      />
+      <span
+        aria-hidden="true"
+      />
+      <span
+        aria-hidden="true"
+      />
+    </a>
+  </div>
+  <div
+    className="navbar-menu"
+    id="navbarBasicExample"
+  >
+    <div
+      className="navbar-end"
+    >
+      <a
+        className="navbar-item link"
+      >
+        About
+      </a>
+      <a
+        className="navbar-item link"
+      >
+        Projects
+      </a>
+      <a
+        className="navbar-item link"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
+`;

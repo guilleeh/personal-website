@@ -1,11 +1,11 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import Header from "../header"
+import ProjectCard from "../projectCard"
 
-describe("Header", () => {
+describe("ProjectCard", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Header siteTitle="Site header" />)
+      .create(<ProjectCard siteTitle="Site projectCard" />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
