@@ -1,16 +1,16 @@
 import React from 'react'
 
-import '../styles/test.css'
+import '../styles/global.css'
 import logo from '../../static/img/memo_logo.png'
 
 const Navbar = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation" style={{backgroundColor: '#FCFEFB'}}>
       <div className="navbar-brand">
-        <a className="navbar-item" href="#">
-          <img src={logo}></img>
+        <a className="navbar-item" href="/">
+          <img src={logo} alt="Guillermo Hernandez Logo"></img>
         </a>
-        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a href="/" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -19,15 +19,15 @@ const Navbar = () => {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-end">
-        <a className="navbar-item link">
+        <a href="#About" className="navbar-item link">
           About
         </a>
 
-        <a className="navbar-item link">
+        <a href="#Projects" className="navbar-item link">
           Projects
         </a>
 
-        <a className="navbar-item link">
+        <a href="#Contact" className="navbar-item link">
           Contact
         </a>
       </div>

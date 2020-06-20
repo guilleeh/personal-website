@@ -16,9 +16,10 @@ exports[`Navbar renders correctly 1`] = `
   >
     <a
       className="navbar-item"
-      href="#"
+      href="/"
     >
       <img
+        alt="Guillermo Hernandez Logo"
         src="test-file-stub"
       />
     </a>
@@ -27,6 +28,7 @@ exports[`Navbar renders correctly 1`] = `
       aria-label="menu"
       className="navbar-burger burger"
       data-target="navbarBasicExample"
+      href="/"
       role="button"
     >
       <span
@@ -49,16 +51,19 @@ exports[`Navbar renders correctly 1`] = `
     >
       <a
         className="navbar-item link"
+        href="#About"
       >
         About
       </a>
       <a
         className="navbar-item link"
+        href="#Projects"
       >
         Projects
       </a>
       <a
         className="navbar-item link"
+        href="#Contact"
       >
         Contact
       </a>

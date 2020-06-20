@@ -6,6 +6,8 @@ import Navbar from '../components/navbar';
 import Header from '../components/header';
 import Body from '../components/body'
 import Projects from '../components/projects'
+import Contact from '../components/contact';
+import Footer from '../components/footer';
 
 
 const IndexPage = () => {
@@ -16,6 +18,9 @@ const IndexPage = () => {
       <Body></Body>
       <br/>
       <Projects></Projects>
+      <br/>
+      <Contact></Contact>
+      <Footer></Footer>
     </React.Fragment>
   )
 }

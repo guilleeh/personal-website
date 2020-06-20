@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from "styled-components"
 import headshot from '../../static/img/me.jpg'
-import '../styles/test.css'
+import '../styles/global.css'
 
 
 const Title = styled.h2`
@@ -11,7 +11,7 @@ const Title = styled.h2`
 
 const Body = () => {
     return(
-        <div className="container">
+        <div id="About" className="container">
             <br/><br/><br/>
             <Title className="title is-2 has-text-centered">About Me</Title>
             <br/>
@@ -19,20 +19,37 @@ const Body = () => {
                 <div className="columns">
                     <div className="column is-two-fifths">
                         <figure className="image is-3by2">
-                            <img src={headshot}></img>
+                            <img src={headshot} alt="Guillermo Hernandez"></img>
                         </figure>
                     </div>
                     <div className="column is-three-fifths">
                         <div className="content is-medium">
-                            <h1>Hello World</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
-                            <h2>Second level</h2>
-                            <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+                            <h1>Hello,</h1>
+                            <p>
+                                My name is Guillermo Hernandez and I am a 2020 CS graduate from UC Irvine. 
+                                I am passionate about web development and I strive to create software that
+                                will impact the world. Welcome to my portfolio website!
+                            </p>
+                            <hr/>
+                            <h4>Interests</h4>
+                            <p>
+                                I am currently seeking a <strong>full-time role as a Software Engineer</strong>. I have most of my experience in
+                                full-stack web development, mainly through React, Python, and Node.js. Below you will find some of the
+                                technologies I've worked with.
+                            </p>
                             <ul>
-                            <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-                            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-                            <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-                            <li>Ut non enim metus.</li>
+                                <li>
+                                    <strong>Web & Frameworks</strong>: React, Node.js, Gatsby, Next.js, Bulma, Bootstrap 4
+                                </li>
+                                <li>
+                                    <strong>Languages</strong>: Python, Javascript, Java, Ruby, C
+                                </li>
+                                <li>
+                                    <strong>Tools</strong>: Git, GitHub, Visual Studio, Vim, Heroku, Netlify, AWS
+                                </li>
+                                <li>
+                                    <strong>Databases</strong>: MySQL, SQLite, PostgreSQL, MongoDB, Firebase DB
+                                </li>
                             </ul>
                         </div>
                     </div>

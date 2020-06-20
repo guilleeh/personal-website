@@ -10,7 +10,7 @@ const Title = styled.h2`
 const Projects = () => {
   return (
     <div className="container is-widescreen">
-      <Title className="title is-2 has-text-centered">Projects</Title>
+      <Title id="Projects" className="title is-2 has-text-centered">Projects</Title>
       <div className="notification" style={{ backgroundColor: 'white'}}>
         <div className="columns">
             <div className="column is-4">

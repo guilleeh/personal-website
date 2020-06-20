@@ -6,6 +6,7 @@ exports[`Projects renders correctly 1`] = `
 >
   <h2
     className="sc-AxjAm jZzJFx title is-2 has-text-centered"
+    id="Projects"
   >
     Projects
   </h2>
@@ -33,7 +34,7 @@ exports[`Projects renders correctly 1`] = `
               class="image is-4by3"
             >
               <img
-                alt="Placeholder image"
+                alt="project 1"
                 src="https://bulma.io/images/placeholders/1280x960.png"
               />
             </figure>
@@ -51,7 +52,7 @@ exports[`Projects renders correctly 1`] = `
                   class="image is-48x48"
                 >
                   <img
-                    alt="Placeholder image"
+                    alt="project 2"
                     src="https://bulma.io/images/placeholders/96x96.png"
                   />
                 </figure>
@@ -75,18 +76,20 @@ exports[`Projects renders correctly 1`] = `
               class="content"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. 
-              <a>
+              <a
+                href="/"
+              >
                 @bulmaio
               </a>
               .
               <a
-                href="#"
+                href="/"
               >
                 #css
               </a>
                
               <a
-                href="#"
+                href="/"
               >
                 #responsive
               </a>
@@ -113,7 +116,7 @@ exports[`Projects renders correctly 1`] = `
               class="image is-4by3"
             >
               <img
-                alt="Placeholder image"
+                alt="project 1"
                 src="https://bulma.io/images/placeholders/1280x960.png"
               />
             </figure>
@@ -131,7 +134,7 @@ exports[`Projects renders correctly 1`] = `
                   class="image is-48x48"
                 >
                   <img
-                    alt="Placeholder image"
+                    alt="project 2"
                     src="https://bulma.io/images/placeholders/96x96.png"
                   />
                 </figure>
@@ -155,18 +158,20 @@ exports[`Projects renders correctly 1`] = `
               class="content"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. 
-              <a>
+              <a
+                href="/"
+              >
                 @bulmaio
               </a>
               .
               <a
-                href="#"
+                href="/"
               >
                 #css
               </a>
                
               <a
-                href="#"
+                href="/"
               >
                 #responsive
               </a>
@@ -193,7 +198,7 @@ exports[`Projects renders correctly 1`] = `
               class="image is-4by3"
             >
               <img
-                alt="Placeholder image"
+                alt="project 1"
                 src="https://bulma.io/images/placeholders/1280x960.png"
               />
             </figure>
@@ -211,7 +216,7 @@ exports[`Projects renders correctly 1`] = `
                   class="image is-48x48"
                 >
                   <img
-                    alt="Placeholder image"
+                    alt="project 2"
                     src="https://bulma.io/images/placeholders/96x96.png"
                   />
                 </figure>
@@ -235,18 +240,20 @@ exports[`Projects renders correctly 1`] = `
               class="content"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. 
-              <a>
+              <a
+                href="/"
+              >
                 @bulmaio
               </a>
               .
               <a
-                href="#"
+                href="/"
               >
                 #css
               </a>
                
               <a
-                href="#"
+                href="/"
               >
                 #responsive
               </a>
