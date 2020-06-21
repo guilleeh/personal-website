@@ -1,15 +1,11 @@
 import React from 'react'
 import styled from "styled-components"
-import ParticlesBg from 'particles-bg'
 
 const H2 = styled.h1`
     color: #457b9d;
 `
 
 const Header = () => {
-    let config = {
-        position: {x:1,y:1,width:100,height:30}, // all or center or {x:1,y:1,width:100,height:100}
-    };
 
     return(
         <React.Fragment>
@@ -27,7 +23,6 @@ const Header = () => {
                 </div>
                 </section>
             </div>
-            <ParticlesBg config={config} color="#a8dadc" num={75} type="cobweb" bg={true} />
         </React.Fragment>
     )
 }

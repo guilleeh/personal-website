@@ -20,8 +20,9 @@ const IndexPage = () => {
       <Projects></Projects>
       <br/>
       <Contact></Contact>
-      <Footer></Footer>
+      <Footer></Footer> 
     </React.Fragment>
   )
 }
+
 export default IndexPage

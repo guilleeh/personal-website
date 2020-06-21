@@ -10,9 +10,9 @@ const Title = styled.h2`
 const Projects = () => {
   var names = ['personal-website', 'Healthi', 'clubs.uci.edu.shpe', 'contact-keeper', 'Teach-Webdev-SHPE', 'search_engine'];
   const [repos, setRepos] = useState([]);
+  
   useEffect(() => {
     // get data from GitHub api
-    console.log(process.env.GITHUB_TOKEN)
     fetch(`https://api.github.com/users/guilleeh/repos`, {headers: {
       "Authorization": process.env.GITHUB_TOKEN
     }})
