@@ -6,3 +6,4 @@ acme-challenge/
 .netlify/
 .cache/
 public
+.env

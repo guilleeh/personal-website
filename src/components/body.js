@@ -42,10 +42,10 @@ const Body = () => {
                                     <strong>Web & Frameworks</strong>: React, Node.js, Gatsby, Next.js, Bulma, Bootstrap 4
                                 </li>
                                 <li>
-                                    <strong>Languages</strong>: Python, Javascript, Java, Ruby, C
+                                    <strong>Languages</strong>: Python, Javascript, Java, Ruby, Swift, C
                                 </li>
                                 <li>
-                                    <strong>Tools</strong>: Git, GitHub, Visual Studio, Vim, Heroku, Netlify, AWS
+                                    <strong>Tools</strong>: Git, GitHub, Visual Studio, Xcode, Vim, Heroku, Netlify, AWS
                                 </li>
                                 <li>
                                     <strong>Databases</strong>: MySQL, SQLite, PostgreSQL, MongoDB, Firebase DB
