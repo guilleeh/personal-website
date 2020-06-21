@@ -8,7 +8,7 @@ const Title = styled.h2`
 `
 
 const Projects = () => {
-  var names = ['personal-website', 'Healthi', 'clubs.uci.edu.shpe', 'contact-keeper', 'Teach-Webdev-SHPE', 'Othello'];
+  var names = ['personal-website', 'Healthi', 'clubs.uci.edu.shpe', 'contact-keeper', 'Teach-Webdev-SHPE', 'search_engine'];
   const [repos, setRepos] = useState([]);
   useEffect(() => {
     // get data from GitHub api
