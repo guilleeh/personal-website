@@ -1,0 +1,36 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1>Hello 👋</h1>
+      <p>
+        My name is Guillermo and I am a full-stack web developer with over 2
+        years of experience building web applications for startups.
+      </p>
+      <p>
+        Here are a few of my areas of interests as well as technologies I know:
+      </p>
+      <ul>
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>FastAPI/Flask/Django</li>
+        <li>React/Next</li>
+        <li>React Native</li>
+        <li>AWS</li>
+        <li>PostgreSQL/MongoDB</li>
+      </ul>
+    </main>
+    <Footer />
+  </body>
+</html>
