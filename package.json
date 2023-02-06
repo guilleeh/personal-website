@@ -2,7 +2,7 @@
   "private": true,
   "sideEffects": false,
   "prisma": {
-    "seed": "ts-node --transpile-only --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "seed": "ts-node --transpile-only prisma/seed.ts"
   },
   "scripts": {
     "build": "run-s \"build:*\"",
