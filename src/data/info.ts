@@ -4,17 +4,28 @@ export const info = {
   jobDescription: "Full-Stack Web Developer",
   about: `I'm a Full-Stack Web Developer based in SoCal.
    I enjoy creating web applications from 0 to production. I have over 3 years of experience building web applications using technologies such as 
-   React, Next.js, Remix, Node.js, Express, Django, Python and Javascript. I am also comfortable working with DevOps tools and platforms such as AWS. 
+   React, Next.js, Remix, Node.js, Express, Django, Python, Javascript and PHP. I am also comfortable working with DevOps tools and platforms such as AWS. 
    During my free time I enjoy learning new technologies and working on side projects. I also play piano, cycle, watch basketball and play video games.
    If you are looking for an experienced developer to join your team, please feel free to reach out to me.
   `,
 
   experience: [
     {
+      name: "Upwork Web Developer - Contractor                        ",
+      location: "Remote",
+      startDate: "October 2020",
+      endDate: "Present",
+      description: [
+        "- Developed and integrated React components with Storybook, improved codebase using Git and TypeScript, and utilized GraphQL for efficient data management for ABLE non-profit.",
+        "- Designed a full stack application using Remix along with authentication, Tailwind CSS, PostgreSQL, and fly.io services for hosting of application named Repayerment.",
+        "- Successfully completed multiple web development projects on Upwork, demonstrating proficiency in technologies such as JavaScript, Python, PostgreSQL, Next.js, and React Native.",
+      ],
+    },
+    {
       name: "Digz.fm - Full Stack Developer (Contract)",
       location: "Remote",
-      startDate: "September 2023",
-      endDate: "Present",
+      startDate: "September 2022",
+      endDate: "July 2023",
       description: [
         "- Migrated outdated React frontend application to a modern Next.js app with updated styles using TailwindCSS.",
         "- Re-architectured backend infrastructure to decouple database and long-running Django servers. Created staging and production environments using AWS Amplify and ElasticBeanstalk.",
@@ -76,15 +87,25 @@ export const info = {
       title: "Sandbox Together",
       isFeatured: true,
       thumbnail: "/assets/images/projects/sandboxtogether.png",
-      // githubUrl: "https://github.com/uzzii-21/astro-portfolio",
       liveUrl: "https://sandboxtogether.app/",
     },
     {
       title: "Digz",
       isFeatured: true,
       thumbnail: "/assets/images/projects/digz.png",
-      // githubUrl: "https://github.com/uzzii-21/astro-portfolio",
       liveUrl: "https://digz.fm",
+    },
+    {
+      title: "Repayerment",
+      isFeatured: true,
+      thumbnail: "/assets/images/projects/repayerment.png",
+      liveUrl: "https://repayerment-production.fly.dev/login",
+    },
+    {
+      title: "eFiling San Diego",
+      isFeatured: true,
+      thumbnail: "/assets/images/projects/efile.png",
+      liveUrl: "https://efile.sandiego.gov/",
     },
   ],
 };
