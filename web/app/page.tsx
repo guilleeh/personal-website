@@ -1,39 +1,39 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useInView,
-  useAnimation,
-} from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import {
   ChevronDown,
   ExternalLink,
   Github,
   Linkedin,
-  Mail,
-  Menu,
-  Moon,
-  Sun,
-  X,
+  User,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ThemeProvider } from "@/components/theme-provider";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-import { Project } from "@/types/project";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { SocialButton } from "@/components/social-button";
+import { AnimatedSection } from "@/components/animated-section";
+import { ProjectCard } from "@/components/project-card";
+import {
+  aboutMe,
+  education,
+  experiences,
+  projects,
+  skills,
+  socialLinks,
+} from "@/lib/constants";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,77 +63,7 @@ export default function Home() {
           style={{ scaleX, transformOrigin: "0%" }}
         />
 
-        {/* Header */}
-        <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container mx-auto flex h-16 items-center">
-            <div className="flex items-center gap-2">
-              <Link href="/" className="font-bold text-xl">
-                <span className="text-teal">Guillermo </span>Hernandez
-              </Link>
-            </div>
-
-            {/* Desktop navigation */}
-            <nav className="hidden md:flex items-center ml-auto">
-              <div className="flex items-center gap-6">
-                {["About", "Projects", "Experience", "Contact"].map((item) => (
-                  <Link
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="text-sm font-medium transition-colors hover:text-teal"
-                  >
-                    {item}
-                  </Link>
-                ))}
-                <ThemeToggle />
-              </div>
-            </nav>
-
-            {/* Mobile menu button */}
-            <div className="flex md:hidden items-center ml-auto gap-4">
-              <ThemeToggle />
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsMenuOpen(!isMenuOpen);
-                }}
-                aria-label="Toggle menu"
-              >
-                {isMenuOpen ? (
-                  <X className="h-5 w-5" />
-                ) : (
-                  <Menu className="h-5 w-5" />
-                )}
-              </Button>
-            </div>
-          </div>
-
-          {/* Mobile navigation */}
-          {isMenuOpen && (
-            <motion.div
-              className="md:hidden absolute top-16 inset-x-0 bg-background border-b"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="container py-4 flex flex-col space-y-4">
-                {["About", "Projects", "Experience", "Contact"].map((item) => (
-                  <Link
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="text-sm font-medium transition-colors hover:text-teal py-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </header>
+        <Header />
 
         <main className="container mx-auto py-8 md:py-12">
           {/* Hero Section */}
@@ -151,9 +81,9 @@ export default function Home() {
                 Full Stack Web Developer
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                I build accessible, user-friendly web applications with modern
-                technologies. Passionate about creating beautiful interfaces and
-                exceptional user experiences.
+                Hi, I&apos;m Guillermo, a Senior Full-Stack Engineer building
+                high-impact, scalable web applications with modern tech and
+                strategic AI integration.
               </p>
               <div className="flex gap-4 justify-center pt-4">
                 <motion.div
@@ -179,18 +109,18 @@ export default function Home() {
               <div className="flex justify-center gap-4 pt-6">
                 <SocialButton
                   icon={<Github className="h-5 w-5" />}
-                  href="https://github.com/yourusername"
+                  href={socialLinks.github}
                   label="GitHub"
                 />
                 <SocialButton
                   icon={<Linkedin className="h-5 w-5" />}
-                  href="https://linkedin.com/in/yourusername"
+                  href={socialLinks.linkedin}
                   label="LinkedIn"
                 />
                 <SocialButton
-                  icon={<Mail className="h-5 w-5" />}
-                  href="mailto:your.email@example.com"
-                  label="Email"
+                  icon={<User className="h-5 w-5" />}
+                  href={socialLinks.upwork}
+                  label="Upwork"
                 />
               </div>
             </motion.div>
@@ -238,8 +168,8 @@ export default function Home() {
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
                   >
                     <Image
-                      src="/placeholder.svg?height=400&width=400"
-                      alt="Your Name"
+                      src="/img/me.jpg"
+                      alt="Guillermo"
                       fill
                       className="object-cover"
                     />
@@ -252,46 +182,55 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="space-y-4"
                 >
-                  <h3 className="text-2xl font-bold text-teal">My Journey</h3>
-                  <p>
-                    I&apos;m a passionate developer with expertise in building
-                    modern web applications. With over X years of experience,
-                    I&apos;ve worked on a variety of projects ranging from small
-                    business websites to complex enterprise applications.
-                  </p>
-                  <p>
-                    My approach combines technical expertise with a strong focus
-                    on user experience. I believe in creating solutions that are
-                    not only functional but also intuitive and enjoyable to use.
-                  </p>
+                  <h3 className="text-2xl font-bold text-teal">
+                    {aboutMe.title}
+                  </h3>
+                  <p>{aboutMe.description}</p>
                   <div className="pt-4">
-                    <h4 className="text-lg font-semibold mb-2">My Skills</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "React",
-                        "Next.js",
-                        "TypeScript",
-                        "Node.js",
-                        "Tailwind CSS",
-                        "Framer Motion",
-                        "UI/UX Design",
-                        "Responsive Design",
-                      ].map((skill, index) => (
-                        <motion.div
-                          key={skill}
-                          initial={{ opacity: 0, y: 10 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1, duration: 0.3 }}
-                        >
-                          <Badge
-                            variant="secondary"
-                            className="bg-navy/10 hover:bg-navy/20 transition-colors border-navy/20"
-                          >
-                            {skill}
-                          </Badge>
-                        </motion.div>
-                      ))}
+                    <h4 className="text-lg font-semibold mb-4">Education</h4>
+                    <p className="text-muted-foreground">
+                      {education.school}
+                      <br />
+                      {education.degree}
+                      <br />
+                      {education.graduationDate}
+                    </p>
+                  </div>
+                  <div className="pt-4">
+                    <h4 className="text-lg font-semibold mb-2">
+                      Technical Skills
+                    </h4>
+                    <div className="space-y-3">
+                      {Object.entries(skills).map(
+                        ([category, items], index) => (
+                          <div key={category}>
+                            <p className="text-sm font-medium text-muted-foreground capitalize mb-1">
+                              {category}:
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                              {items.map((skill, skillIndex) => (
+                                <motion.div
+                                  key={skill}
+                                  initial={{ opacity: 0, y: 10 }}
+                                  whileInView={{ opacity: 1, y: 0 }}
+                                  viewport={{ once: true }}
+                                  transition={{
+                                    delay: index * 0.1 + skillIndex * 0.05,
+                                    duration: 0.3,
+                                  }}
+                                >
+                                  <Badge
+                                    variant="secondary"
+                                    className="bg-navy/10 hover:bg-navy/20 transition-colors border-navy/20"
+                                  >
+                                    {skill}
+                                  </Badge>
+                                </motion.div>
+                              ))}
+                            </div>
+                          </div>
+                        )
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -299,7 +238,6 @@ export default function Home() {
             </AnimatedSection>
           </section>
 
-          {/* Projects Section */}
           <section id="projects" className="py-16 md:py-24 scroll-mt-16">
             <AnimatedSection>
               <div className="mb-12 text-center">
@@ -309,35 +247,7 @@ export default function Home() {
                 <div className="h-1 w-20 bg-yellow mx-auto mt-4" />
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  {
-                    title: "Project One",
-                    description:
-                      "A modern web application built with Next.js and Tailwind CSS.",
-                    image: "/placeholder.svg?height=300&width=500",
-                    tags: ["Next.js", "React", "Tailwind CSS"],
-                    liveUrl: "#",
-                    githubUrl: "#",
-                  },
-                  {
-                    title: "Project Two",
-                    description:
-                      "An e-commerce platform with a custom CMS and payment integration.",
-                    image: "/placeholder.svg?height=300&width=500",
-                    tags: ["React", "Node.js", "MongoDB"],
-                    liveUrl: "#",
-                    githubUrl: "#",
-                  },
-                  {
-                    title: "Project Three",
-                    description:
-                      "A mobile-first web application with real-time data visualization.",
-                    image: "/placeholder.svg?height=300&width=500",
-                    tags: ["TypeScript", "D3.js", "Firebase"],
-                    liveUrl: "#",
-                    githubUrl: "#",
-                  },
-                ].map((project, index) => (
+                {projects.map((project, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -377,29 +287,7 @@ export default function Home() {
                 <div className="h-1 w-20 bg-yellow mx-auto mt-4" />
               </div>
               <div className="space-y-12 max-w-3xl mx-auto">
-                {[
-                  {
-                    role: "Senior Frontend Developer",
-                    company: "Company Name",
-                    period: "2022 - Present",
-                    description:
-                      "Led the development of the company's flagship product, improving performance by 40%. Mentored junior developers and implemented best practices for code quality.",
-                  },
-                  {
-                    role: "Frontend Developer",
-                    company: "Another Company",
-                    period: "2020 - 2022",
-                    description:
-                      "Developed responsive web applications using React and TypeScript. Collaborated with designers to implement pixel-perfect UI components.",
-                  },
-                  {
-                    role: "Web Developer Intern",
-                    company: "Startup Inc.",
-                    period: "2019 - 2020",
-                    description:
-                      "Assisted in the development of various web projects. Gained experience in modern frontend technologies and agile development methodologies.",
-                  },
-                ].map((experience, index) => (
+                {experiences.map((experience, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -425,8 +313,15 @@ export default function Home() {
                         <span>{experience.company}</span>
                         <span>•</span>
                         <span>{experience.period}</span>
+                        <span>•</span>
+                        <span>{experience.type}</span>
                       </div>
-                      <p>{experience.description}</p>
+                      <p className="mb-3">{experience.description}</p>
+                      <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                        {experience.achievements.map((achievement, i) => (
+                          <li key={i}>{achievement}</li>
+                        ))}
+                      </ul>
                     </div>
                   </motion.div>
                 ))}
@@ -468,13 +363,14 @@ export default function Home() {
                   <CardContent className="space-y-4 relative">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full flex items-center justify-center bg-teal/10">
-                        <Mail className="h-4 w-4 text-teal" />
+                        <User className="h-4 w-4 text-teal" />
                       </div>
                       <Link
-                        href="mailto:your.email@example.com"
+                        href={socialLinks.upwork}
+                        target="_blank"
                         className="hover:text-teal transition-colors"
                       >
-                        your.email@example.com
+                        {socialLinks.upwork}
                       </Link>
                     </div>
                     <div className="flex items-center gap-3">
@@ -482,11 +378,11 @@ export default function Home() {
                         <Linkedin className="h-4 w-4 text-teal" />
                       </div>
                       <Link
-                        href="https://linkedin.com/in/yourusername"
+                        href={socialLinks.linkedin}
                         target="_blank"
                         className="hover:text-teal transition-colors"
                       >
-                        linkedin.com/in/yourusername
+                        {socialLinks.linkedin}
                       </Link>
                     </div>
                     <div className="flex items-center gap-3">
@@ -494,202 +390,22 @@ export default function Home() {
                         <Github className="h-4 w-4 text-teal" />
                       </div>
                       <Link
-                        href="https://github.com/yourusername"
+                        href={socialLinks.github}
                         target="_blank"
                         className="hover:text-teal transition-colors"
                       >
-                        github.com/yourusername
+                        {socialLinks.github}
                       </Link>
                     </div>
                   </CardContent>
-                  <CardFooter className="flex justify-center relative">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button
-                        asChild
-                        className="bg-teal hover:bg-teal/90 text-white"
-                      >
-                        <Link href="mailto:your.email@example.com">
-                          Send me an email
-                        </Link>
-                      </Button>
-                    </motion.div>
-                  </CardFooter>
                 </Card>
               </motion.div>
             </AnimatedSection>
           </section>
         </main>
 
-        <footer className="border-t border-teal/20 py-6 md:py-8">
-          <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-            <div>
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Your Name. All rights reserved.
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <SocialButton
-                icon={<Github className="h-4 w-4" />}
-                href="https://github.com/yourusername"
-                label="GitHub"
-              />
-              <SocialButton
-                icon={<Linkedin className="h-4 w-4" />}
-                href="https://linkedin.com/in/yourusername"
-                label="LinkedIn"
-              />
-              <SocialButton
-                icon={<Mail className="h-4 w-4" />}
-                href="mailto:your.email@example.com"
-                label="Email"
-              />
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </ThemeProvider>
-  );
-}
-
-// Project Card Component
-function ProjectCard({ project }: { project: Project }) {
-  return (
-    <motion.div
-      whileHover={{ y: -5 }}
-      transition={{ type: "spring", stiffness: 300, damping: 10 }}
-    >
-      <Card className="overflow-hidden h-full flex flex-col group border-teal/20 hover:border-teal/40 transition-colors">
-        <div className="relative h-48 w-full overflow-hidden">
-          <Image
-            src={project.image || "/placeholder.svg"}
-            alt={project.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-        <CardHeader>
-          <CardTitle className="text-teal">{project.title}</CardTitle>
-          <CardDescription>{project.description}</CardDescription>
-        </CardHeader>
-        <CardContent className="flex-grow">
-          <div className="flex flex-wrap gap-2 mb-4">
-            {project.tags.map((tag) => (
-              <Badge
-                key={tag}
-                variant="secondary"
-                className="bg-navy/10 border-navy/20"
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </CardContent>
-        <CardFooter className="flex gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            asChild
-            className="hover:bg-teal/10 hover:text-teal transition-colors"
-          >
-            <Link
-              href={project.liveUrl}
-              target="_blank"
-              className="inline-flex items-center gap-1"
-            >
-              Live Demo
-              <ExternalLink className="h-3 w-3" />
-            </Link>
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            asChild
-            className="hover:bg-teal/10 hover:text-teal transition-colors"
-          >
-            <Link
-              href={project.githubUrl}
-              target="_blank"
-              className="inline-flex items-center gap-1"
-            >
-              Code
-              <Github className="h-3 w-3" />
-            </Link>
-          </Button>
-        </CardFooter>
-      </Card>
-    </motion.div>
-  );
-}
-
-// Theme Toggle Component
-function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
-
-  return (
-    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        aria-label="Toggle theme"
-        className="relative"
-      >
-        <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      </Button>
-    </motion.div>
-  );
-}
-
-// Social Button Component
-function SocialButton({
-  icon,
-  href,
-  label,
-}: {
-  icon: React.ReactNode;
-  href: string;
-  label: string;
-}) {
-  return (
-    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-      <Button variant="ghost" size="icon" asChild>
-        <Link href={href} target="_blank" aria-label={label}>
-          <div className="text-muted-foreground hover:text-teal transition-colors">
-            {icon}
-          </div>
-        </Link>
-      </Button>
-    </motion.div>
-  );
-}
-
-// Animated Section Component
-function AnimatedSection({ children }: { children: React.ReactNode }) {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-      }}
-    >
-      {children}
-    </motion.div>
   );
 }
