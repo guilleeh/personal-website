@@ -1,3 +1,5 @@
+import { Project } from "@/types/project";
+
 export const navigationItems = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
@@ -86,32 +88,63 @@ export const experiences = [
   },
 ];
 
-export const projects = [
+export const projects: Project[] = [
+  // {
+  //   title: "AI-Powered Research Assistant",
+  //   description:
+  //     "Developed a retrieval-augmented chatbot for a global research firm, enhancing data accessibility and creating new revenue streams.",
+  //   image: "/placeholder.svg?height=300&width=500",
+  //   tags: ["Next.js", "LangChain", "OpenAI", "Qdrant"],
+  //   liveUrl: "#",
+  //   githubUrl: "#",
+  // },
   {
-    title: "AI-Powered Research Assistant",
-    description:
-      "Developed a retrieval-augmented chatbot for a global research firm, enhancing data accessibility and creating new revenue streams.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Next.js", "LangChain", "OpenAI", "Qdrant"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Warehouse Management System",
+    title: "HelloDock | Efficient BOL Document Management",
     description:
       "Enterprise WMS solution with multi-tenant architecture, authentication, and payment integration.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Next.js", "Auth0", "Stripe", "AWS"],
-    liveUrl: "#",
-    githubUrl: "#",
+    image: "/img/projects/hellodock.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Golang",
+      "AWS",
+      "ExpressJS",
+      "React",
+    ],
+    liveUrl: "https://hellodock.com",
   },
   {
-    title: "Employee Management Platform",
+    title: "SandboxTogether",
     description:
       "SaaS platform for manager/employee interactions with comprehensive analytics and reporting.",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Next.js", "Python", "PostgreSQL", "AWS"],
-    liveUrl: "#",
-    githubUrl: "#",
+    image: "/img/projects/sandbox.jpg",
+    liveUrl: "https://sandboxtogether.com",
+    tags: [
+      "Next.js",
+      "Python",
+      "PostgreSQL",
+      "AWS",
+      "FastAPI",
+      "TypeScript",
+      "React",
+    ],
+  },
+  // add digz project below
+  {
+    title: "Digz | E-Digging Evolved",
+    description:
+      "Modernized legacy application and improved infrastructure scalability.",
+    image: "/img/projects/digz.jpg",
+    tags: [
+      "Next.js",
+      "Django",
+      "PostgreSQL",
+      "AWS",
+      "API Integration",
+      "React",
+      "DevOps",
+    ],
+    liveUrl: "https://digz.fm",
   },
 ];

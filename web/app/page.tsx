@@ -2,13 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import {
-  ChevronDown,
-  ExternalLink,
-  Github,
-  Linkedin,
-  User,
-} from "lucide-react";
+import { ChevronDown, Github, Linkedin, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -259,7 +253,7 @@ export default function Home() {
                   </motion.div>
                 ))}
               </div>
-              <div className="text-center mt-12">
+              {/* <div className="text-center mt-12">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -275,7 +269,7 @@ export default function Home() {
                     </Link>
                   </Button>
                 </motion.div>
-              </div>
+              </div> */}
             </AnimatedSection>
           </section>
 

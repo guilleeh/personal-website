@@ -47,36 +47,40 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         </CardContent>
         <CardFooter className="flex gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            asChild
-            className="hover:bg-teal/10 hover:text-teal transition-colors"
-          >
-            <Link
-              href={project.liveUrl}
-              target="_blank"
-              className="inline-flex items-center gap-1"
+          {project.liveUrl && (
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="hover:bg-teal/10 hover:text-teal transition-colors"
             >
-              Live Demo
-              <ExternalLink className="h-3 w-3" />
-            </Link>
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            asChild
-            className="hover:bg-teal/10 hover:text-teal transition-colors"
-          >
-            <Link
-              href={project.githubUrl}
-              target="_blank"
-              className="inline-flex items-center gap-1"
+              <Link
+                href={project.liveUrl}
+                target="_blank"
+                className="inline-flex items-center gap-1"
+              >
+                Live Demo
+                <ExternalLink className="h-3 w-3" />
+              </Link>
+            </Button>
+          )}
+          {project.githubUrl && (
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="hover:bg-teal/10 hover:text-teal transition-colors"
             >
-              Code
-              <Github className="h-3 w-3" />
-            </Link>
-          </Button>
+              <Link
+                href={project.githubUrl}
+                target="_blank"
+                className="inline-flex items-center gap-1"
+              >
+                Code
+                <Github className="h-3 w-3" />
+              </Link>
+            </Button>
+          )}
         </CardFooter>
       </Card>
     </motion.div>
